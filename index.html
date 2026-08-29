@@ -2,799 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Durga Prasad — Portfolio</title>
-    <link rel="icon" href="assets/icon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Durga Prasad — Full Stack Developer & Machine Learning Enthusiast. Building scalable web applications, ML solutions, and smart digital systems." />
+  <meta name="keywords" content="Durga Prasad, Full Stack Developer, Machine Learning, Portfolio, Web Developer" />
+  <meta name="author" content="Durga Prasad" />
+  <title>Durga Prasad</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <!-- Icons -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="All_css/Base.css">
-    <link rel="stylesheet" href="All_css/Home.css">
-    <link rel="stylesheet" href="All_css/About.css">
-    <link rel="stylesheet" href="All_css/loader.css">
-    <link rel="stylesheet" href="All_css/skill.css">
-    <link rel="stylesheet" href="All_css/project.css">
-    <link rel="stylesheet" href="All_css/footer.css">
-    <link rel="stylesheet" href="All_css/cursor.css">
+  <!-- Devicons for technology logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="https://img.magnific.com/premium-vector/dp-monogram-logo-design_695270-430.jpg">
 </head>
 
-<body class="alternate">
+<body>
 
-    <div class="welcome">
-        <img class="welcome-logo" src="assets/icon.png" alt="Logo">
-        <h1>Welcome to My Portfolio</h1>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-        <div class="progress-container">
-            <div class="progress-bar"></div>
-        </div>
+  <!-- Cursor Glow (desktop) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
+  <!-- Navigation Overlay for mobile -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============================
+       NAVBAR
+       ============================ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo" id="navLogo">
+      <!-- Populated by JS -->
+    </a>
+
+    <div class="nav-hamburger" id="navHamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <!-- ═══════════ NAVBAR ═══════════ -->
-    <section class="navbar activiteAfterLoad">
-        <div class="logo">
-            <p><img src="assets/icon.png" alt="Profile Image"><span> Durga Prasad</span>.dev</p>
+    <ul class="nav-links" id="navLinks">
+      <!-- Populated by JS -->
+    </ul>
+  </nav>
+
+  <!-- ============================
+       HOME / HERO SECTION
+       ============================ -->
+  <section id="home">
+    <div class="hero-bg-text" id="heroBgText"></div>
+
+    <div class="hero-content">
+      <div class="hero-left" id="heroLeft">
+        <p class="hero-greeting" id="heroGreeting"></p>
+        <h1 class="hero-name" id="heroName"></h1>
+        <p class="hero-role" id="heroRole"></p>
+        <p class="hero-description" id="heroDesc"></p>
+
+        <div class="hero-buttons" id="heroButtons"></div>
+
+        <div class="hero-socials" id="heroSocials"></div>
+
+        <div class="hero-stats" id="heroStats"></div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-image-wrapper" id="heroImageWrapper">
+          <img class="hero-image" id="heroImage" alt="Durga Prasad — Developer" />
         </div>
-        <div class="nav-bar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certification">Certifications</a>
-            <a href="#contact">Contact</a>
-            <button class="resume" download="Durga_Prasad_Kota_Resume.pdf">My Resume <i
-                    class="fas fa-download"></i></button>
-        </div>
-        <button class="hamburger">&#9776;</button>
-    </section>
-
-    <!-- ═══════════ SIDEBAR ═══════════ -->
-    <section class="side-bar activiteAfterLoad">
-        <button class="cross">&times;</button>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certification">Certifications</a>
-        <a href="#contact">Contact</a>
-        <button class="resume" download="Durga_Prasad_Kota_Resume.pdf">My Resume <i
-                class="fas fa-download"></i></button>
-    </section>
-
-    <!-- ═══════════ HERO ═══════════ -->
-    <section class="hero activiteAfterLoad" id="home">
-        <div class="hero-inner">
-            <div class="hero-left">
-                <div class="hero-subtitle reveal">
-                    <span class="dot"></span> Hello, I'm
-                </div>
-                <h1 class="hero-title reveal">Durga Prasad</h1>
-                <div class="hero-role reveal">
-                    <span class="role-line typed-role"></span>
-                </div>
-                <p class="hero-desc reveal">
-                    I build scalable web applications and machine learning solutions that solve real-world problems
-                    and
-                    create impact.
-                </p>
-                <div class="hero-btns reveal">
-                    <button class="btn-primary" onclick="location.href='#projects'">
-                        View My Work <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn-ghost" onclick="location.href='#contact'">
-                        Contact Me <i class="far fa-envelope"></i>
-                    </button>
-                </div>
-                <div class="hero-social-section reveal">
-                    <span class="social-label">Connect with me</span>
-                    <div class="hero-socials">
-                        <a href="https://github.com/Durgaprasad-kota" title="GitHub" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/durga-prasad-kota-9a5b65320" title="LinkedIn"
-                            target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://instagram.com/alone_gamer_rolex" title="Instagram" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="mailto:durgaprasad04289@gmail.com" title="Mail" target="_blank">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image-section reveal from-right">
-                <div class="hero-visual">
-
-                    <!-- Purple Circle -->
-                    <div class="glow-circle"></div>
-
-                    <!-- Dashed Ring -->
-                    <div class="orbit-ring"></div>
-
-                    <!-- Profile Image -->
-                    <div class="profile-wrapper me">
-                        <img src="assets/me.jpeg" alt="Profile">
-                    </div>
-
-                    <!-- Floating Skill Cards -->
-
-                    <div class="skill-card react">
-                        <div class="skill-inner">
-                            <i class="devicon-fastapi-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card fastapi">
-                        <div class="skill-inner">
-                            <i class="devicon-postgresql-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card javascript">
-                        <div class="skill-inner">
-                            <i class="devicon-docker-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card html">
-                        <div class="skill-inner">
-                            <i class="devicon-typescript-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card css">
-                        <div class="skill-inner">
-                            <i class="devicon-react-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card django">
-                        <div class="skill-inner">
-                            <i class="devicon-javascript-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card python">
-                        <div class="skill-inner">
-                            <i class="devicon-css3-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card postgres">
-                        <div class="skill-inner">
-                            <i class="devicon-html5-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card docker">
-                        <div class="skill-inner">
-                            <i class="fas fa-brain colored "></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card typescript">
-                        <div class="skill-inner">
-                            <i class="devicon-python-plain colored"></i>
-                        </div>
-                    </div>
-
-                    <div class="skill-card Ml">
-                        <div class="skill-inner">
-                            <i class="devicon-django-plain colored"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-hint">
-            <div class="scroll-mouse"></div>
-            <span>Scroll</span>
-        </div>
-        <!-- Typed.js -->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script>
-            new Typed(".typed-role", {
-                strings: ["Python Full Stack Developer", "Machine Learning Engineer", "AI Solutions Builder"],
-                typeSpeed: 75, backSpeed: 45, backDelay: 1600, loop: true
-            });
-        </script>
-    </section>
-
-    <!-- ═══════════ ABOUT ═══════════ -->
-    <section class="about activiteAfterLoad" id="about">
-        <div class="container">
-            <div class="section-header reveal">
-                <h1><span class="grad-text">About</span> Me</h1>
-                <hr class="rule">
-            </div>
-            <div class="about-grid">
-                <div class="my-info">
-                    <div class="intro-card reveal from-left">
-
-                        <div class="intro-header">
-                            <img src="assets/me.jpeg" alt="Durga Prasad" class="profile-img">
-
-                            <div class="intro-title">
-                                <h3>Durga Prasad</h3>
-                                <span>AI & ML Enthusiast • Full Stack Developer</span>
-                            </div>
-                        </div>
-
-                        <p class="intro-text">
-                            I'm a Computer Science student at <strong>RCCE</strong> with a strong interest in
-                            <strong>Artificial Intelligence</strong>,
-                            <strong>Machine Learning</strong>,
-                            and <strong>Modern Web Development</strong>.
-                        </p>
-
-                        <p class="intro-text">
-                            I enjoy building scalable applications, solving real-world problems,
-                            and creating clean, efficient, and user-focused digital experiences.
-                        </p>
-
-                        <div class="intro-tags">
-                            <span><i class="devicon-python-plain colored"></i> Python</span>
-                            <span><i class="devicon-react-original colored"></i> React</span>
-                            <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
-                            <span><i class="devicon-django-plain colored"></i> Django</span>
-                            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
-                            <span><i class="devicon-git-plain colored"></i> Git</span>
-                        </div>
-
-                    </div>
-                    <div class="about-info">
-                        <div class="info-card reveal from-right">
-                            <div class="card-head">
-                                <i class="fas fa-graduation-cap"></i>
-                                <h1>Education</h1>
-                            </div>
-                            <div class="card-body education-list">
-
-                                <div class="entry education-item">
-                                    <div class="edu-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-
-                                    <div class="edu-content">
-                                        <div class="edu-top">
-                                            <h4>B.Tech - CSE (AI & ML)</h4>
-                                            <span class="edu-score">CGPA 8.9</span>
-                                        </div>
-
-                                        <p class="edu-college">
-                                            Ramachandra College of Engineering, Eluru
-                                        </p>
-
-                                        <div class="edu-meta">
-                                            <span><i class="fas fa-calendar"></i> 2024 - Present</span>
-                                            <span><i class="fas fa-brain"></i> AI & ML</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="entry education-item">
-                                    <div class="edu-icon">
-                                        <i class="fas fa-book-open"></i>
-                                    </div>
-
-                                    <div class="edu-content">
-                                        <div class="edu-top">
-                                            <h4>Intermediate (MPC)</h4>
-                                            <span class="edu-score">91%</span>
-                                        </div>
-
-                                        <p class="edu-college">
-                                            Venkateswara Junior College, Jangareddygudem
-                                        </p>
-
-                                        <div class="edu-meta">
-                                            <span><i class="fas fa-calendar"></i> 2022 - 2024</span>
-                                            <span><i class="fas fa-square-root-alt"></i> MPC</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="entry education-item">
-                                    <div class="edu-icon">
-                                        <i class="fas fa-school"></i>
-                                    </div>
-
-                                    <div class="edu-content">
-                                        <div class="edu-top">
-                                            <h4>Secondary School (SSC)</h4>
-                                            <span class="edu-score">90%</span>
-                                        </div>
-
-                                        <p class="edu-college">
-                                            ZPHS School, East Yadavalli
-                                        </p>
-
-                                        <div class="edu-meta">
-                                            <span><i class="fas fa-calendar"></i> 2021 - 2022</span>
-                                            <span><i class="fas fa-certificate"></i> SSC</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info-card reveal">
-                    <div class="card-head">
-                        <i class="fas fa-code"></i>
-                        <h1>Core Tech</h1>
-                    </div>
-                    <div class="card-body tags-body">
-                        <div class="Frontend-list">
-                            <h2>Frontend</h2>
-                            <div class="tags">
-                                <span> <i class="devicon-react-plain colored"></i> React.js</span>
-                                <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
-                                <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
-                                <span><i class="devicon-html5-plain colored"></i> HTML</span>
-                                <span><i class="devicon-css3-plain colored"></i> CSS</span>
-                            </div>
-                        </div>
-                        <div class="Backend-list">
-                            <h2>Backend</h2>
-                            <div class="tags">
-                                <span><i class="devicon-python-plain colored"></i> Python</span>
-                                <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
-                                <span><i class="devicon-django-plain colored"></i> Django</span>
-                                <span><i class="fas fa-brain"></i> Machine Leaning</span>
-                                <span><i class="devicon-postgresql-plain colored"></i> PostgresSQL</span>
-                                <span><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
-                                <span><i class="devicon-docker-plain colored"></i> Docker</span>
-                            </div>
-                        </div>
-                        <div class="tools-list">
-                            <h2>Tools and Hostings</h2>
-                            <div class="tags">
-                                <span><i class="devicon-git-plain colored"></i> Git</span>
-                                <span><i class="devicon-github-plain colored"></i> GitHub</span>
-                                <span><i class="devicon-docker-plain colored"></i> Docker</span>
-                                <span><i class="devicon-netlify-plain colored"></i> Netlify</span>
-                                <span><i class="devicon-vercel-plain colored"></i> Vercel</span>
-                                <span><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
-                                <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
-                                <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ SKILLS ═══════════ -->
-    <section class="skills" id="skills">
-        <h1 class="reveal">My Skills </h1>
-        <hr class="reveal">
-        <div class="skill-show">
-            <div class="frontend stack reveal">
-                <h1><i class="fas fa-laptop-code"></i> Frontend</h1>
-                <div class="frotend-bars">
-                    <div class="bar-outer">
-                        <i class="devicon-html5-plain colored"></i>
-                        <span></span>
-                        <p>95%</p>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-css3-plain colored"></i>
-                        <span></span>
-                        <p>90%</p>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-javascript-plain colored"></i>
-                        <span></span>
-                        <p>80%</p>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-react-original colored"></i>
-                        <span></span>
-                        <p>75%</p>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-typescript-plain colored"></i>
-                        <span></span>
-                        <p>70%</p>
-                    </div>
-                </div>
-            </div>
-            <div class="backend stack reveal">
-                <h1><i class="fas fa-server"></i> Backend</h1>
-                <div class="backend-circle-grid">
-                    <div class="circle-item">
-                        <div class="circle-progress">
-                            <svg class="progress-ring" width="90" height="90">
-                                <circle class="progress-ring-bg" stroke="var(--purple-100)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" />
-                                <circle class="progress-ring-fill" stroke="var(--purple-600)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" stroke-linecap="round" />
-                            </svg>
-                            <div class="circle-inner">
-                                <i class="devicon-python-plain colored"></i>
-                                <p>90%</p>
-                            </div>
-                        </div>
-                        <h3>Python</h3>
-                    </div>
-                    <div class="circle-item">
-                        <div class="circle-progress">
-                            <svg class="progress-ring" width="90" height="90">
-                                <circle class="progress-ring-bg" stroke="var(--purple-100)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" />
-                                <circle class="progress-ring-fill" stroke="var(--purple-600)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" stroke-linecap="round" />
-                            </svg>
-                            <div class="circle-inner">
-                                <i class="devicon-django-plain colored"></i>
-                                <p>85%</p>
-                            </div>
-                        </div>
-                        <h3>Django</h3>
-                    </div>
-                    <div class="circle-item">
-                        <div class="circle-progress">
-                            <svg class="progress-ring" width="90" height="90">
-                                <circle class="progress-ring-bg" stroke="var(--purple-100)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" />
-                                <circle class="progress-ring-fill" stroke="var(--purple-600)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" stroke-linecap="round" />
-                            </svg>
-                            <div class="circle-inner">
-                                <i class="devicon-fastapi-plain colored"></i>
-                                <p>85%</p>
-                            </div>
-                        </div>
-                        <h3>FastAPI</h3>
-                    </div>
-                    <div class="circle-item">
-                        <div class="circle-progress">
-                            <svg class="progress-ring" width="90" height="90">
-                                <circle class="progress-ring-bg" stroke="var(--purple-100)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" />
-                                <circle class="progress-ring-fill" stroke="var(--purple-600)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" stroke-linecap="round" />
-                            </svg>
-                            <div class="circle-inner">
-                                <i class="devicon-postgresql-plain colored"></i>
-                                <p>80%</p>
-                            </div>
-                        </div>
-                        <h3>ML</h3>
-                    </div>
-                    <div class="circle-item">
-                        <div class="circle-progress">
-                            <svg class="progress-ring" width="90" height="90">
-                                <circle class="progress-ring-bg" stroke="var(--purple-100)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" />
-                                <circle class="progress-ring-fill" stroke="var(--purple-600)" stroke-width="6"
-                                    fill="transparent" r="42" cx="45" cy="45" stroke-linecap="round" />
-                            </svg>
-                            <div class="circle-inner">
-                                <i class="devicon-tensorflow-original colored"></i>
-                                <p>80%</p>
-                            </div>
-                        </div>
-                        <h3>TensorFlow</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="database stack reveal">
-                <h1><i class=" fas fa-database"></i> Databases </h1>
-                <div class="database-bars">
-                    <div class="bar-outer">
-                        <i class="devicon-mysql-plain colored"></i>
-                        <h3>MySQL</h3>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-postgresql-plain colored"></i>
-                        <h3>PostgreSQL</h3>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-mongodb-plain colored"></i>
-                        <h3>MongoDB</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="hosting stack reveal">
-                <h1><i class=" fas fa-globe"></i> Hostings </h1>
-                <div class="hosting-bars">
-                    <div class="bar-outer">
-                        <i class="devicon-git-plain colored"></i>
-                        <h3>Git</h3>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-github-plain colored"></i>
-                        <h3>GitHub</h3>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-docker-plain colored"></i>
-                        <h3>Docker</h3>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-vercel-plain colored"></i>
-                        <h3>Vercel</h3>
-                    </div>
-                    <div class="bar-outer">
-                        <i class="devicon-vscode-plain colored"></i>
-                        <h3>VS Code</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel">
-            <div class="cards-container">
-                <div class="cards">
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-react-original colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-django-plain colored"></i>
-                    <i class="devicon-fastapi-plain colored"></i>
-                    <i class="devicon-mysql-plain colored"></i>
-                    <i class="devicon-postgresql-plain colored"></i>
-                    <i class="devicon-mongodb-plain colored"></i>
-                    <i class="fas fa-brain"></i>
-                    <i class="devicon-tensorflow-plain colored"></i>
-                    <i class="devicon-git-plain colored"></i>
-                    <i class="devicon-github-plain colored"></i>
-                    <i class="devicon-docker-plain colored"></i>
-                    <i class="devicon-vercel-plain colored"></i>
-                    <i class="devicon-vscode-plain colored"></i>
-                </div>
-                <div class="cards">
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-react-original colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-django-plain colored"></i>
-                    <i class="devicon-fastapi-plain colored"></i>
-                    <i class="devicon-mysql-plain colored"></i>
-                    <i class="devicon-postgresql-plain colored"></i>
-                    <i class="devicon-mongodb-plain colored"></i>
-                    <i class="fas fa-brain"></i>
-                    <i class="devicon-tensorflow-plain colored"></i>
-                    <i class="devicon-git-plain colored"></i>
-                    <i class="devicon-github-plain colored"></i>
-                    <i class="devicon-docker-plain colored"></i>
-                    <i class="devicon-vercel-plain colored"></i>
-                    <i class="devicon-vscode-plain colored"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ PROJECTS ═══════════ -->
-    <section class="projects" id="projects">
-
-        <!-- Section Header -->
-        <div class="projects-header">
-            <h1>My <span>Projects</span>
-                <hr>
-            </h1>
-        </div>
-
-
-        <!-- Card 1 -->
-        <div class="project-outer reveal">
-            <div class="inner-outer">
-                <span class="proj-num">01</span>
-                <div class="project-inner">
-                    <div class="project-image">
-                        <div class="browser-header">
-                            <span class="browser-dot red"></span>
-                            <span class="browser-dot yellow"></span>
-                            <span class="browser-dot green"></span>
-                        </div>
-                        <img src="assets/algoflow_icon.png" alt="Algo Flow DSA Sheet">
-                    </div>
-                    <div class="project-inner-2">
-                        <h3>Algo Flow DSA Sheet</h3>
-                        <p class="project-desc">A premium interactive DSA sheet designed to track progress, log
-                            problem-solving notes, and master algorithms with local persistence.</p>
-                        <div class="project-tags">
-                            <span><i class="devicon-react-plain colored"></i> React.js</span>
-                            <span><i class="devicon-javascript-plain colored"></i> JS</span>
-                            <span><i class="fas fa-database"></i> LocalStorage</span>
-                        </div>
-                        <div class="project-actions">
-                            <button class="btn-visit"><a href="https://algoflow-dsa-sheet.vercel.app/"
-                                    target="_blank">Visit
-                                    Project <i class="fas fa-external-link-alt"></i></a></button>
-                            <button class="btn-github"><a href="https://github.com/Durgaprasad-kota"
-                                    target="_blank">Github
-                                    <i class="fab fa-github"></i></a></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="project-outer reveal">
-            <div class="inner-outer">
-                <span class="proj-num">02</span>
-                <div class="project-inner">
-                    <div class="project-image">
-                        <div class="browser-header">
-                            <span class="browser-dot red"></span>
-                            <span class="browser-dot yellow"></span>
-                            <span class="browser-dot green"></span>
-                        </div>
-                        <img src="assets/codeeditor.png" alt="Live Code Editor">
-                    </div>
-                    <div class="project-inner-2">
-                        <h3>Live Code Editor</h3>
-                        <p class="project-desc">A real-time, lightweight web editor that compiles and displays HTML,
-                            CSS,
-                            and JS side-by-side with immediate live feedback.</p>
-                        <div class="project-tags">
-                            <span><i class="devicon-html5-plain colored"></i> HTML</span>
-                            <span><i class="devicon-css3-plain colored"></i> CSS</span>
-                            <span><i class="devicon-javascript-plain colored"></i> JS</span>
-                        </div>
-                        <div class="project-actions">
-                            <button class="btn-visit"><a href="https://durgaprasadcodes.github.io/Live-Code-Editor/"
-                                    target="_blank">Visit Project <i class="fas fa-external-link-alt"></i></a></button>
-                            <button class="btn-github"><a href="https://github.com/Durgaprasad-kota"
-                                    target="_blank">Github
-                                    <i class="fab fa-github"></i></a></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="project-outer reveal">
-            <div class="inner-outer">
-                <span class="proj-num">03</span>
-                <div class="project-inner">
-                    <div class="project-image">
-                        <div class="browser-header">
-                            <span class="browser-dot red"></span>
-                            <span class="browser-dot yellow"></span>
-                            <span class="browser-dot green"></span>
-                        </div>
-                        <img src="assets/expense_tracker.png" alt="Expense Tracker">
-                    </div>
-                    <div class="project-inner-2">
-                        <h3>Expense Tracker</h3>
-                        <p class="project-desc">A clean financial tracker designed to budget expenses by month,
-                            visualize
-                            transactional logs, and secure user data locally.</p>
-                        <div class="project-tags">
-                            <span><i class="devicon-react-plain colored"></i> React.js</span>
-                            <span><i class="devicon-javascript-plain colored"></i> JS</span>
-                            <span><i class="fas fa-database"></i> LocalStorage</span>
-                        </div>
-                        <div class="project-actions">
-                            <button class="btn-visit"><a href="https://expense-tracker-per-month.vercel.app/"
-                                    target="_blank">Visit
-                                    Project <i class="fas fa-external-link-alt"></i></a></button>
-                            <button class="btn-github"><a href="https://github.com/Durgaprasad-kota"
-                                    target="_blank">Github
-                                    <i class="fab fa-github"></i></a></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <!-- <section class="certifications" id="certifications" class="activiteAfterLoad"></section> -->
-
-    <!-- ═══════════ FOOTER ═══════════  -->
-    <div class="foot-mess activiteAfterLoad">
-        <p>Wanna Work Together ?</p>
-        <h1>HIRE ME !</h1>
+      </div>
     </div>
-    <footer class="footer activiteAfterLoad">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Column 1: Brand -->
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="assets/icon.png" alt="Logo">
-                        <span>Durga Prasad</span>.dev
-                    </div>
-                    <p class="footer-brand-text">
-                        Building scalable web applications, machine learning solutions, and smart digital systems to
-                        solve real-world problems.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://github.com/Durgaprasad-kota" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/durga-prasad-kota-9a5b65320" target="_blank"
-                            title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://instagram.com/alone_gamer_rolex" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://leetcode.com/u/Durga_Prasad_Kota/" target="_blank" title="LeetCode">
-                            <i class="devicon-leetcode-plain "></i>
-                        </a>
-                    </div>
-                </div>
+  </section>
 
-                <div class="foot-link-tags">
-                    <!-- Column 2: Navigation -->
-                    <div class="footer-links-col">
-                        <h4>Navigation</h4>
-                        <ul class="footer-links">
-                            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-                            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                        </ul>
-                    </div>
-                </div>
+  <!-- Transition divider: white → black -->
+  <div class="section-divider-down"></div>
 
-                <!-- Column 4: Contact Info -->
-                <div class="footer-links-col">
-                    <h4>Contact Info</h4>
-                    <ul class="footer-contact-info">
-                        <li>
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:durgaprasad04289@gmail.com">durgaprasad04289@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Eluru, Andhra Pradesh, India</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-briefcase"></i>
-                            <span>Available for Opportunities</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <!-- ============================
+       ABOUT SECTION
+       ============================ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <p class="section-label" id="aboutLabel"></p>
+          <h2 class="section-title" id="aboutTitle"></h2>
+          <p class="section-desc" id="aboutDesc"></p>
 
-            <hr class="footer-divider">
-
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; 2026 Durga Prasad. All rights reserved.</p>
-                <p class="footer-signature">Made with <i class="fas fa-heart signature-heart"></i> by Durga Prasad</p>
-            </div>
+          <div class="about-highlights" id="aboutHighlights"></div>
         </div>
-    </footer>
 
-    <!-- ═══════════ CURSOR ═══════════ -->
-    <!-- <div class="cursor-dot" id="cursor-dot">
-        <div class="cursor-dot-inner"></div>
+        <div class="about-right">
+          <div class="timeline-container" id="timelineContainer">
+            <div class="timeline-line"></div>
+            <div class="timeline-progress" id="timelineProgress"></div>
+            <!-- Timeline items populated by JS -->
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="cursor-ring" id="cursor-ring">
-        <div class="cursor-ring-inner"></div>
-    </div> -->
+  </section>
 
-    <!-- Smooth Scroll (Lenis) -->
-    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
-    <script src="js/script.js"></script>
+  <!-- Transition divider: black → white -->
+  <div class="section-divider-up"></div>
+
+  <!-- ============================
+       SKILLS SECTION
+       ============================ -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header reveal">
+        <p class="section-label" id="skillsLabel"></p>
+        <h2 class="section-title" id="skillsTitle"></h2>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Skill cards populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Transition divider: white → black -->
+  <div class="section-divider-down"></div>
+
+  <!-- ============================
+       PROJECTS SECTION
+       ============================ -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-header reveal">
+        <p class="section-label" id="projectsLabel"></p>
+        <h2 class="section-title" id="projectsTitle"></h2>
+        <p class="section-desc" id="projectsDesc"></p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project cards populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Transition divider: black → white -->
+  <div class="section-divider-up"></div>
+
+  <!-- ============================
+       CONTACT SECTION
+       ============================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <p class="section-label" id="contactLabel"></p>
+          <h2 class="section-title" id="contactTitle"></h2>
+          <p class="section-desc" id="contactDesc"></p>
+
+          <div id="contactInfo"></div>
+
+          <div class="contact-socials" id="contactSocials"></div>
+        </div>
+
+        <div class="contact-right reveal">
+          <form class="contact-form" id="contactForm">
+            <!-- Form fields populated by JS -->
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand" id="footerBrand"></div>
+          <p class="footer-desc" id="footerDesc"></p>
+          <div class="footer-socials" id="footerSocials"></div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" id="footerNavTitle"></h4>
+          <nav class="footer-nav" id="footerNav"></nav>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" id="footerContactTitle"></h4>
+          <div id="footerContactInfo"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p id="footerCopyright"></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>

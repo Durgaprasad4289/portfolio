@@ -1,0 +1,370 @@
+{
+  "personal": {
+    "name": "Durga Prasad",
+    "brand": "Durga Prasad.dev",
+    "role": "Full Stack Developer & Machine Learning Enthusiast",
+    "location": "Eluru, Andhra Pradesh, India",
+    "email": "durgaprasad04289@gmail.com",
+    "availability": "Available for Opportunities",
+    "tagline": "Building scalable web applications, machine learning solutions, and smart digital systems to solve real-world problems.",
+    "heroTitle": "HIRE ME!",
+    "heroSubtitle": "Wanna Work Together?",
+    "resumeButton": {
+      "text": "Download Resume",
+      "link": "#"
+    },
+    "contactButton": {
+      "text": "Let's Talk",
+      "link": "#contact"
+    },
+    "profileImage": "assets/me.jpeg"
+  },
+  "navigation": [
+    {
+      "name": "Home",
+      "link": "#home"
+    },
+    {
+      "name": "About",
+      "link": "#about"
+    },
+    {
+      "name": "Skills",
+      "link": "#skills"
+    },
+    {
+      "name": "Projects",
+      "link": "#projects"
+    },
+    {
+      "name": "Contact",
+      "link": "#contact"
+    },
+    {
+      "name": "Resume",
+      "link": "resume/durga_prasad_resume.pdf",
+      "download": true
+    }
+  ],
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "icon": "fa-brands fa-github",
+      "link": "https://github.com/"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "fa-brands fa-linkedin-in",
+      "link": "https://linkedin.com/"
+    },
+    {
+      "name": "Instagram",
+      "icon": "fa-brands fa-instagram",
+      "link": "https://instagram.com/"
+    },
+    {
+      "name": "LeetCode",
+      "icon": "fa-solid fa-code",
+      "link": "https://leetcode.com/"
+    }
+  ],
+  "home": {
+    "navbar": {
+      "logo": "Durga Prasad.dev",
+      "sticky": true
+    },
+    "hero": {
+      "smallTitle": "Hello, I am",
+      "mainTitle": "DURGA PRASAD",
+      "highlightText": "FULL STACK DEVELOPER",
+      "description": "I build modern, scalable web applications and explore machine learning, deep learning, and AI-powered systems.",
+      "backgroundText": "CREATE. BUILD. INNOVATE.",
+      "image": "assets/me.jpeg"
+    },
+    "buttons": [
+      {
+        "text": "View My Work",
+        "link": "#projects",
+        "type": "primary"
+      },
+      {
+        "text": "Contact Me",
+        "link": "#contact",
+        "type": "secondary"
+      }
+    ],
+    "stats": [
+      {
+        "number": "6+",
+        "label": "Projects"
+      },
+      {
+        "number": "Full Stack",
+        "label": "Development"
+      },
+      {
+        "number": "AI/ML",
+        "label": "Learning"
+      }
+    ]
+  },
+  "about": {
+    "sectionTitle": "ABOUT ME",
+    "heading": "Turning Ideas Into Digital Experiences",
+    "description": "I’m Durga Prasad, a tech enthusiast and Machine Learning Engineer passionate about building intelligent and interactive systems. With a strong foundation in AI/ML, and backend development, I blend creativity and logic to craft impactful digital solutions that connect users and technology.",
+    "highlights": [
+      "Full Stack Web Development",
+      "Backend API Development",
+      "Machine Learning",
+      "Deep Learning",
+      "RAG Applications",
+      "Continuous Learning"
+    ],
+    "timeline": [
+      {
+        "year": "2024",
+        "title": "Started Full Stack Development",
+        "description": "Focused on building web applications and understanding modern frontend and backend development."
+      },
+      {
+        "year": "2025",
+        "title": "Expanded Backend Skills",
+        "description": "Worked with Django, FastAPI, REST APIs, authentication, databases, and backend architecture."
+      },
+      {
+        "year": "2026",
+        "title": "Machine Learning & AI",
+        "description": "Focused on machine learning, deep learning, NLP concepts, and practical AI applications."
+      },
+      {
+        "year": "Next",
+        "title": "Building Intelligent Systems",
+        "description": "Combining full stack development with RAG, LLMs, and AI-powered applications."
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "MY SKILLS",
+    "heading": "Technologies I Work With",
+    "categories": [
+      {
+        "name": "Frontend",
+        "icon": "fa-solid fa-layer-group",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React.js",
+          "Responsive Design",
+          "REST API Integration"
+        ]
+      },
+      {
+        "name": "Backend",
+        "icon": "fa-solid fa-server",
+        "skills": [
+          "Python",
+          "Django",
+          "Django REST Framework",
+          "FastAPI",
+          "REST APIs",
+          "Authentication",
+          "JWT"
+        ]
+      },
+      {
+        "name": "Database",
+        "icon": "fa-solid fa-database",
+        "skills": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "Database Design"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "icon": "fa-solid fa-brain",
+        "skills": [
+          "Python",
+          "NumPy",
+          "Pandas",
+          "Scikit-learn",
+          "Data Preprocessing",
+          "Feature Engineering",
+          "Model Evaluation"
+        ]
+      },
+      {
+        "name": "Deep Learning",
+        "icon": "fa-solid fa-network-wired",
+        "skills": [
+          "Neural Networks",
+          "TensorFlow",
+          "PyTorch",
+          "CNN",
+          "RNN",
+          "NLP Basics"
+        ]
+      },
+      {
+        "name": "RAG & AI",
+        "icon": "fa-solid fa-wand-magic-sparkles",
+        "skills": [
+          "LangChain",
+          "RAG",
+          "LLMs",
+          "Embeddings",
+          "Vector Databases",
+          "Prompt Engineering"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "sectionTitle": "FEATURED PROJECTS",
+    "heading": "Things I Have Built",
+    "description": "These are sample projects and will be replaced with real projects later.",
+    "items": [
+      {
+        "id": 5,
+        "title": "AI Document Assistant",
+        "category": "RAG / AI",
+        "description": "An AI-powered application that allows users to upload documents and ask questions using Retrieval-Augmented Generation.",
+        "image": "assets/pdf_chatbot.png",
+        "technologies": [
+          "React",
+          "FastAPI",
+          "LangChain",
+          "Vector Database"
+        ],
+        "github": "",
+        "live": ""
+      },
+      {
+        "id": 2,
+        "title": "Full Stack Authentication System",
+        "category": "Full Stack",
+        "description": "A secure authentication system with registration, login, JWT authentication, HttpOnly cookies, and protected routes.",
+        "image": "assets/authentication.png",
+        "technologies": [
+          "React",
+          "FastAPI",
+          "PostgreSQL",
+          "JWT"
+        ],
+        "github": "",
+        "live": ""
+      },
+      {
+        "id": 3,
+        "title": "Student Performance Analysis ",
+        "category": "Machine Learning",
+        "description": "A web application that uses a trained machine learning model to make predictions from performance and feedback of students.",
+        "image": "assets/student_analysis.png",
+        "technologies": [
+          "Python",
+          "Scikit-learn",
+          "FastAPI",
+          "React"
+        ],
+        "github": "",
+        "live": ""
+      },
+      {
+        "id": 4,
+        "title": "E-Commerce Platform",
+        "category": "Full Stack",
+        "description": "A modern e-commerce application with products, cart functionality, authentication, orders, and an admin dashboard.",
+        "image": "assets/e_commerce.png",
+        "technologies": [
+          "React",
+          "Django",
+          "PostgreSQL",
+          "REST API"
+        ],
+        "github": "",
+        "live": ""
+      },
+      {
+        "id": 1,
+        "title": "Let's Grind DSA",
+        "category": "Web Application",
+        "description": "A modern platform for practicing data structures and algorithms.",
+        "image": "assets/algoflow.png",
+        "technologies": [
+          "React",
+          "Django",
+          "PostgreSQL"
+        ],
+        "github": "",
+        "live": ""
+      },
+      {
+        "id": 6,
+        "title": "Spam Email Classifier",
+        "category": "AI / NLP",
+        "description": "An application that classifies emails as spam or not spam using machine learning models based on user input.",
+        "image": "assets/spam_email_classifier.png",
+        "technologies": [
+          "Python",
+          "NLP",
+          "Machine Learning",
+          "FastAPI"
+        ],
+        "github": "",
+        "live": ""
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "GET IN TOUCH",
+    "heading": "Let's Build Something Together",
+    "description": "Have an opportunity, project, or idea? Feel free to contact me.",
+    "email": "durgaprasad04289@gmail.com",
+    "location": "Eluru, Andhra Pradesh, India",
+    "availability": "Available for Opportunities",
+    "form": {
+      "fields": [
+        {
+          "name": "name",
+          "label": "Your Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Your Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "subject",
+          "label": "Subject",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "message",
+          "label": "Your Message",
+          "type": "textarea",
+          "required": true
+        }
+      ],
+      "button": "Send Message"
+    }
+  },
+  "footer": {
+    "brand": "Durga Prasad.dev",
+    "description": "Building scalable web applications, machine learning solutions, and smart digital systems to solve real-world problems.",
+    "navigationTitle": "Navigation",
+    "contactTitle": "Contact Info",
+    "copyright": "© 2026 Durga Prasad. All rights reserved.",
+    "socialLinks": [
+      "GitHub",
+      "LinkedIn",
+      "Instagram",
+      "LeetCode"
+    ]
+  }
+}
