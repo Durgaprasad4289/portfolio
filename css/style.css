@@ -1519,6 +1519,10 @@ button {
     height: 250px;
   }
 
+  .project-desc {
+    display: none;
+  }
+
   /* Contact */
   .contact-grid {
     grid-template-columns: 1fr;

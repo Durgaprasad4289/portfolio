@@ -303,7 +303,7 @@
               <span class="project-category">${p.category}</span>
             </div>
             <h3>${p.title}</h3>
-            <p>${p.description}</p>
+            <p class="project-desc">${p.description}</p>
             <div class="project-tech">
               ${p.technologies.map(t => {
         const sd = getSkillData(t);
