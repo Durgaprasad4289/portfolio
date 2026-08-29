@@ -8,10 +8,13 @@
   'use strict';
 
   /* ------------------------------------------
-     0.  UTILITY HELPERS
+     0.  UTILITY HELPERS & LENIS SMOOTH SCROLL
      ------------------------------------------ */
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  /** Check for reduced-motion preference */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /** Throttle using requestAnimationFrame */
   function rafThrottle(fn) {
@@ -27,8 +30,45 @@
     };
   }
 
-  /** Check for reduced-motion preference */
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null;
+
+  function initLenis() {
+    if (typeof Lenis === 'undefined' || prefersReducedMotion) return;
+
+    lenis = new Lenis({
+      duration: 3.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2.0,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Smooth scroll for all anchor navigation links
+    document.addEventListener('click', (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (href === '#' || !href) return;
+      const target = document.querySelector(href);
+      if (target && lenis) {
+        e.preventDefault();
+        lenis.scrollTo(target, {
+          offset: 0,
+          duration: 1.3,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+      }
+    });
+  }
 
   /* ------------------------------------------
      1.  LOAD PORTFOLIO DATA & BOOT
@@ -266,9 +306,9 @@
             <p>${p.description}</p>
             <div class="project-tech">
               ${p.technologies.map(t => {
-                const sd = getSkillData(t);
-                return `<span><i class="${sd.icon}"></i>${t}</span>`;
-              }).join('')}
+        const sd = getSkillData(t);
+        return `<span><i class="${sd.icon}"></i>${t}</span>`;
+      }).join('')}
             </div>
             <div class="project-links">
               <a href="${p.github || 'https://github.com/'}" class="project-link-github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
@@ -402,6 +442,7 @@
      3.  ANIMATION SYSTEM
      ------------------------------------------ */
   function initAnimations() {
+    initLenis();
     initNavbar();
     initScrollProgress();
     initRevealObserver();
