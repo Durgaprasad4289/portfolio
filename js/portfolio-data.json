@@ -253,8 +253,8 @@
           "PostgreSQL",
           "JWT"
         ],
-        "github": "",
-        "live": ""
+        "github": "https://github.com/durgaprasadcodes/Authentication_using_FastAPI.git",
+        "live": "https://authentication-using-fast-api.vercel.app"
       },
       {
         "id": 3,
@@ -297,8 +297,8 @@
           "Django",
           "PostgreSQL"
         ],
-        "github": "",
-        "live": ""
+        "github": "https://github.com/durgaprasadcodes/Algoflow-DSA-Sheet.git",
+        "live": "https://algoflow-dsa-sheet.vercel.app"
       },
       {
         "id": 6,
