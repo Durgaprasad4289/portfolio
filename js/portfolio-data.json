@@ -76,9 +76,9 @@
     "hero": {
       "smallTitle": "Hello, I am",
       "mainTitle": "DURGA PRASAD",
-      "highlightText": "FULL STACK DEVELOPER",
+      "highlightText": "PYTHON FULL STACK DEVELOPER & MACHINE LEARNING ENTHUSIAST",
       "description": "I build modern, scalable web applications and explore machine learning, deep learning, and AI-powered systems.",
-      "backgroundText": "CREATE. BUILD. INNOVATE.",
+      "backgroundText": "PYTHON FULL STACK DEV",
       "image": "assets/me.jpeg"
     },
     "buttons": [
@@ -95,7 +95,7 @@
     ],
     "stats": [
       {
-        "number": "6+",
+        "number": "26+",
         "label": "Projects"
       },
       {

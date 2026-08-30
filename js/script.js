@@ -451,6 +451,7 @@
     initProjectCardObserver();
     initProjectScrollStack();
     initParallaxHero();
+    initRingFloat();
     initContactForm();
     initCursorGlow();
   }
@@ -729,6 +730,42 @@
     }));
   }
 
+  /* --- Floating ring animation around hero image --- */
+  function initRingFloat() {
+    if (prefersReducedMotion) return;
+
+    const wrapper = $('#heroImageWrapper');
+    if (!wrapper) return;
+
+    // Create real elements to animate (can't animate pseudo-elements via JS)
+    const ringInner = document.createElement('div');
+    const ringOuter = document.createElement('div');
+    ringInner.className = 'hero-ring hero-ring-inner';
+    ringOuter.className = 'hero-ring hero-ring-outer';
+    wrapper.appendChild(ringInner);
+    wrapper.appendChild(ringOuter);
+
+    // Hide CSS pseudo-element rings since we replaced them
+    wrapper.classList.add('rings-active');
+
+    let start = null;
+    function animate(timestamp) {
+      if (!start) start = timestamp;
+      const elapsed = (timestamp - start) / 1000;
+
+      // Gentle sine wave drift: ~3-5px, slow period
+      const innerX = Math.sin(elapsed * 0.8) * 4;
+      const innerY = Math.cos(elapsed * 0.6) * 2;
+      const outerX = Math.sin(elapsed * 0.5 + Math.PI) * 5;
+      const outerY = Math.cos(elapsed * 0.7 + Math.PI) * 3;
+
+      ringInner.style.transform = `rotate(3deg) translate(${innerX}px, ${innerY}px)`;
+      ringOuter.style.transform = `rotate(-2deg) translate(${outerX}px, ${outerY}px)`;
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+  }
 
 
   /* --- Contact form validation & simulated submit --- */
