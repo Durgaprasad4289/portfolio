@@ -768,13 +768,13 @@
   }
 
 
-  /* --- Contact form validation & simulated submit --- */
+  /* --- Contact form validation & Web3Forms submit --- */
   function initContactForm() {
     const form = $('#contactForm');
     const success = $('#formSuccess');
     if (!form) return;
 
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let valid = true;
 
@@ -793,15 +793,33 @@
 
       if (!valid) return;
 
-      // Simulate sending
+      // Show loading state
       const btn = $('.btn-submit', form);
       btn.classList.add('loading');
 
-      setTimeout(() => {
+      try {
+        const formData = new FormData(form);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const result = await response.json();
+
         btn.classList.remove('loading');
-        form.style.display = 'none';
-        success.classList.add('show');
-      }, 1800);
+
+        if (result.success) {
+          form.style.display = 'none';
+          success.classList.add('show');
+          form.reset();
+        } else {
+          alert(result.message || 'Failed to send message.');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        btn.classList.remove('loading');
+        alert('Something went wrong. Please try again.');
+      }
     });
 
     // Clear errors on input
